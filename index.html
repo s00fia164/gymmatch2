@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymMatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <img src="logo.png" alt="GymMatch Logo" id="logo">
+        <h1>GymMatch</h1>
+        <p>Hej!! Jestem GymMatch, od dzisiaj będę twoim GymBro!! 😊</p>
+        <p>GymMatch to aplikacja, która pomoże Ci znaleźć GymBuddy lub trenera personalnego.</p>
+    </header>
+
+    <section id="gymbuddy">
+        <h2>Jeśli potrzebujesz GymBuddy:</h2>
+        <div class="swiper-container">
+            <img src="1.png" alt="User 1">
+            <img src="2.png" alt="User 2">
+            <img src="3.png" alt="User 3">
+            <img src="4.png" alt="User 4">
+            <img src="5.png" alt="User 5">
+            <img src="6.png" alt="User 6">
+            <img src="7.png" alt="User 7">
+            <img src="8.png" alt="User 8">
+        </div>
+        <div class="actions">
+            <button id="like">👍</button>
+            <button id="dislike">👎</button>
+        </div>
+    </section>
+
+    <section id="personal-trainer">
+        <h2>Jeśli potrzebujesz trenera personalnego:</h2>
+        <form>
+            <label for="sport">Wybierz sport:</label>
+            <select id="sport">
+                <option>Pilates</option>
+                <option>Siłownia</option>
+                <option>Joga</option>
+                <option>Boks</option>
+                <option>Cardio</option>
+                <option>Bieganie</option>
+                <option>CrossFit</option>
+                <option>Kulturystyka</option>
+            </select>
+
+            <label for="age">Wiek:</label>
+            <input type="number" id="age" min="18" max="100" value="25">
+
+            <label for="gender">Płeć:</label>
+            <select id="gender">
+                <option>Mężczyzna</option>
+                <option>Kobieta</option>
+                <option>Inna</option>
+            </select>
+
+            <label for="experience">Doświadczenie:</label>
+            <input type="range" id="experience" min="1" max="10" value="5">
+
+            <label for="goals">Cele:</label>
+            <input type="text" id="goals" placeholder="np. Odchudzanie, zdrowy styl życia">
+        </form>
+    </section>
+
+    <footer>
+        <h3>Planujemy dodać:</h3>
+        <ul>
+            <li>Integracja z siłowniami</li>
+            <li>Więcej filtrów</li>
+            <li>System rekomendacji trenera</li>
+        </ul>
+        <p>Kontakt: info@gymmatch.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
