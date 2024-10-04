@@ -30,13 +30,19 @@ section {
 .swiper-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
 }
 
-.swiper-container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+.swipe-img {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.swipe-img:first-of-type {
+    display: block;
 }
 
 .actions {
@@ -54,10 +60,16 @@ section {
     cursor: pointer;
 }
 
-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+#trainer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#trainer-table th, #trainer-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #87CEFA;
 }
 
 footer {
