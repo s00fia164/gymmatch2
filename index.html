@@ -18,14 +18,14 @@
     <section id="gymbuddy">
         <h2>Jeśli potrzebujesz GymBuddy:</h2>
         <div class="swiper-container">
-            <img src="images/1.png" alt="User 1">
-            <img src="images/2.png" alt="User 2">
-            <img src="images/3.png" alt="User 3">
-            <img src="images/4.png" alt="User 4">
-            <img src="images/5.png" alt="User 5">
-            <img src="images/6.png" alt="User 6">
-            <img src="images/7.png" alt="User 7">
-            <img src="imaages/8.png" alt="User 8">
+            <img src="images/user1.jpg" alt="User 1" class="swipe-img">
+            <img src="images/user2.jpg" alt="User 2" class="swipe-img">
+            <img src="images/user3.jpg" alt="User 3" class="swipe-img">
+            <img src="images/user4.jpg" alt="User 4" class="swipe-img">
+            <img src="images/user5.jpg" alt="User 5" class="swipe-img">
+            <img src="images/user6.jpg" alt="User 6" class="swipe-img">
+            <img src="images/user7.jpg" alt="User 7" class="swipe-img">
+            <img src="images/user8.jpg" alt="User 8" class="swipe-img">
         </div>
         <div class="actions">
             <button id="like">👍</button>
@@ -35,27 +35,25 @@
 
     <section id="personal-trainer">
         <h2>Jeśli potrzebujesz trenera personalnego:</h2>
-        <form>
+        <form id="filter-form">
             <label for="sport">Wybierz sport:</label>
             <select id="sport">
-                <option>Pilates</option>
-                <option>Siłownia</option>
-                <option>Joga</option>
-                <option>Boks</option>
-                <option>Cardio</option>
-                <option>Bieganie</option>
-                <option>CrossFit</option>
-                <option>Kulturystyka</option>
+                <option value="all">Wszystkie</option>
+                <option value="pilates">Pilates</option>
+                <option value="siłownia">Siłownia</option>
+                <option value="joga">Joga</option>
+                <option value="boks">Boks</option>
+                <option value="cardio">Cardio</option>
+                <option value="bieganie">Bieganie</option>
+                <option value="crossfit">CrossFit</option>
+                <option value="kulturystyka">Kulturystyka</option>
             </select>
-
-            <label for="age">Wiek:</label>
-            <input type="number" id="age" min="18" max="100" value="25">
 
             <label for="gender">Płeć:</label>
             <select id="gender">
-                <option>Mężczyzna</option>
-                <option>Kobieta</option>
-                <option>Inna</option>
+                <option value="all">Wszystkie</option>
+                <option value="male">Mężczyzna</option>
+                <option value="female">Kobieta</option>
             </select>
 
             <label for="experience">Doświadczenie:</label>
@@ -64,6 +62,20 @@
             <label for="goals">Cele:</label>
             <input type="text" id="goals" placeholder="np. Odchudzanie, zdrowy styl życia">
         </form>
+
+        <table id="trainer-table">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Sport</th>
+                    <th>Płeć</th>
+                    <th>Doświadczenie</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Trenerzy zostaną dodani dynamicznie z JavaScript -->
+            </tbody>
+        </table>
     </section>
 
     <footer>
