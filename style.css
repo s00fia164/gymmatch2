@@ -1,1 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #87CEFA;
+}
+
+#logo {
+    width: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+section {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+}
+
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.swiper-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.actions button {
+    font-size: 1.5em;
+    background-color: #87CEFA;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+footer {
+    background-color: #87CEFA;
+    text-align: center;
+    padding: 20px;
+}
+
+footer h3 {
+    margin-top: 0;
+}
