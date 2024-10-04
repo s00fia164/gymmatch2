@@ -32,7 +32,7 @@ section {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    height: 200px;
+    height: 300px; /* Ustalona wysokość dla swipe */
 }
 
 .swipe-img {
@@ -102,4 +102,20 @@ section {
     h1 {
         font-size: 2em;
     }
+}
+
+/* Stylizacja dla sekcji weryfikacji */
+.verified-user {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #87CEFA; /* Tło sekcji */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.verified-user img {
+    width: 50px; /* Ustalony rozmiar emotki */
+    height: 50px;
+    margin-right: 10px; /* Odstęp między obrazkiem a tekstem */
 }
