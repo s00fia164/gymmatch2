@@ -1,105 +1,70 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #FFFFFF;
-    color: #000000;
-    margin: 0;
-    padding: 0;
+// Algorytm swajpowania - kolejno wyświetlane obrazy
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.swiper-container .swipe-img');
+
+document.getElementById('like').addEventListener('click', function() {
+    swipeImage();
+});
+
+document.getElementById('dislike').addEventListener('click', function() {
+    swipeImage();
+});
+
+function swipeImage() {
+    images[currentImageIndex].style.display = 'none';
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].style.display = 'block';
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #87CEFA;
+// Trenerzy - tabela z rekomendacjami i filtrowaniem
+const trainers = [
+    { name: 'Anna Nowak', sport: 'Pilates', gender: 'female', experience: 8, recommended: true },
+    { name: 'Jan Kowalski', sport: 'Siłownia', gender: 'male', experience: 7, recommended: true },
+    { name: 'Ewa Kwiatkowska', sport: 'Joga', gender: 'female', experience: 5, recommended: false },
+    { name: 'Adam Wiśniewski', sport: 'Boks', gender: 'male', experience: 6, recommended: false },
+    { name: 'Karolina Lewandowska', sport: 'Cardio', gender: 'female', experience: 4, recommended: false },
+    { name: 'Paweł Zieliński', sport: 'Bieganie', gender: 'male', experience: 9, recommended: false },
+    { name: 'Olga Malinowska', sport: 'CrossFit', gender: 'female', experience: 7, recommended: false },
+    { name: 'Michał Stasiak', sport: 'Kulturystyka', gender: 'male', experience: 10, recommended: false }
+];
+
+// Funkcja wyświetlająca trenerów
+function displayTrainers(filteredTrainers) {
+    const tableBody = document.querySelector('#trainer-table tbody');
+    tableBody.innerHTML = ''; // Wyczyść tabelę
+
+    filteredTrainers.forEach(trainer => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${trainer.name}</td>
+            <td>${trainer.sport}</td>
+            <td>${trainer.gender === 'male' ? 'Mężczyzna' : 'Kobieta'}</td>
+            <td>${trainer.experience}</td>
+        `;
+        tableBody.appendChild(row);
+    });
 }
 
-#logo {
-    width: 100px;
+// Filtruj trenerów według wybranych kryteriów
+function filterTrainers() {
+    const sport = document.getElementById('sport').value;
+    const gender = document.getElementById('gender').value;
+    const experience = document.getElementById('experience').value;
+
+    let filteredTrainers = trainers.filter(trainer => {
+        return (sport === 'all' || trainer.sport.toLowerCase() === sport.toLowerCase()) &&
+               (gender === 'all' || trainer.gender === gender) &&
+               trainer.experience >= experience;
+    });
+
+    // Rekomendowani trenerzy zawsze na górze
+    filteredTrainers = filteredTrainers.sort((a, b) => b.recommended - a.recommended);
+
+    displayTrainers(filteredTrainers);
 }
 
-h1 {
-    font-size: 2.5em;
-}
+// Nasłuchiwanie zmian w formularzu filtrów
+document.getElementById('filter-form').addEventListener('input', filterTrainers);
 
-section {
-    margin: 20px;
-    padding: 10px;
-    background-color: #f0f8ff;
-    border-radius: 8px;
-}
-
-.swiper-container {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    height: 200px;
-}
-
-.swipe-img {
-    display: none;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.swipe-img:first-of-type {
-    display: block;
-}
-
-.actions {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.actions button {
-    font-size: 1.5em;
-    background-color: #87CEFA;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#trainer-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-#trainer-table th, #trainer-table td {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #87CEFA;
-}
-
-#trainer-table th {
-    background-color: #87CEFA;
-    color: white;
-}
-
-/* Stylizacja dla małych ekranów (telefony) */
-@media screen and (max-width: 600px) {
-    #trainer-table th, #trainer-table td {
-        padding: 6px;
-        font-size: 14px;
-    }
-
-    #trainer-table {
-        width: 100%;
-        margin: 0;
-    }
-
-    /* Zmniejszenie wielkości czcionki w tabeli na małych ekranach */
-    #trainer-table th, #trainer-table td {
-        font-size: 12px;
-    }
-
-    section {
-        margin: 10px;
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-}
+// Początkowe wyświetlenie trenerów
+filterTrainers();
