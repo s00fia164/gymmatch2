@@ -121,11 +121,11 @@ section {
 }
 
 .btn {
-    font-size: 1.5em;
+    font-size: 2em; /* Zwiększenie rozmiaru tekstu */
     background-color: #87CEFA;
     border: none;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 20px 40px; /* Zwiększenie paddingu dla większego rozmiaru przycisku */
+    margin: 10px; /* Zwiększenie marginesów */
+    border-radius: 10px; /* Zwiększenie zaokrąglenia rogów */
     cursor: pointer;
 }
