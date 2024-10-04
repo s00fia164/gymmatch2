@@ -119,3 +119,13 @@ section {
     height: 50px;
     margin-right: 10px; /* Odstęp między obrazkiem a tekstem */
 }
+
+.btn {
+    font-size: 1.5em;
+    background-color: #87CEFA;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
