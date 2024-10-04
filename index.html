@@ -31,61 +31,68 @@
             <button id="like">👍</button>
             <button id="dislike">👎</button>
         </div>
+        <div class="verified-user">
+            <img src="images/9.png" alt="Verified User" class="verified-img">
+            <p>Osoba zweryfikowana. Dbamy o bezpieczeństwo naszych klientów, dlatego każdy obowiązkowo przechodzi weryfikację.</p>
+        </div>
     </section>
 
     <section id="personal-trainer">
         <h2>Jeśli potrzebujesz trenera personalnego:</h2>
-        <section>
-    <form id="filter-form">
-        <label for="sport">Sport:</label>
-        <select id="sport">
-            <option value="all">Wszystkie</option>
-            <option value="Pilates">Pilates</option>
-            <option value="Siłownia">Siłownia</option>
-            <option value="Joga">Joga</option>
-            <option value="Boks">Boks</option>
-            <option value="Cardio">Cardio</option>
-            <option value="Bieganie">Bieganie</option>
-            <option value="CrossFit">CrossFit</option>
-            <option value="Kulturystyka">Kulturystyka</option>
-        </select>
+        <form id="filter-form">
+            <label for="sport">Wybierz sport:</label>
+            <select id="sport">
+                <option value="all">Wszystkie</option>
+                <option value="Pilates">Pilates</option>
+                <option value="Siłownia">Siłownia</option>
+                <option value="Joga">Joga</option>
+                <option value="Boks">Boks</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Bieganie">Bieganie</option>
+                <option value="CrossFit">CrossFit</option>
+                <option value="Kulturystyka">Kulturystyka</option>
+            </select>
 
-        <label for="gender">Płeć:</label>
-        <select id="gender">
-            <option value="all">Wszyscy</option>
-            <option value="male">Mężczyzna</option>
-            <option value="female">Kobieta</option>
-        </select>
+            <label for="gender">Płeć:</label>
+            <select id="gender">
+                <option value="all">Wszyscy</option>
+                <option value="male">Mężczyzna</option>
+                <option value="female">Kobieta</option>
+            </select>
 
-        <label for="experience">Doświadczenie (lata):</label>
-        <input type="number" id="experience" value="0" min="0" />
-    </form>
+            <label for="experience">Doświadczenie (lata):</label>
+            <input type="number" id="experience" value="0" min="0" />
+        </form>
 
-    <table id="trainer-table">
-        <thead>
-            <tr>
-                <th>Imię i nazwisko</th>
-                <th>Sport</th>
-                <th>Płeć</th>
-                <th>Doświadczenie (lata)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Trenerzy zostaną dodani tutaj przez JavaScript -->
-        </tbody>
-    </table>
-</section>
+        <table id="trainer-table">
+            <thead>
+                <tr>
+                    <th>Imię i nazwisko</th>
+                    <th>Sport</th>
+                    <th>Płeć</th>
+                    <th>Doświadczenie (lata)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Trenerzy zostaną dodani tutaj przez JavaScript -->
+            </tbody>
+        </table>
+    </section>
 
-     <footer>
+    <footer>
         <h3>Planujemy dodać:</h3>
         <ul>
-            <li>Współpraca z siłowniami</li>
+            <li>Integracja z siłowniami</li>
+            <li>Więcej filtrów</li>
+            <li>System rekomendacji trenera</li>
             <li>Kalendarz treningów</li>
+            <li>Współpraca z siłowniami</li>
             <li>AI Coach do tworzenia planów treningowych i diet</li>
         </ul>
         <p>Kontakt: info@gymmatch.com</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
