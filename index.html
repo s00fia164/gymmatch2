@@ -35,48 +35,46 @@
 
     <section id="personal-trainer">
         <h2>Jeśli potrzebujesz trenera personalnego:</h2>
-        <form id="filter-form">
-            <label for="sport">Wybierz sport:</label>
-            <select id="sport">
-                <option value="all">Wszystkie</option>
-                <option value="pilates">Pilates</option>
-                <option value="siłownia">Siłownia</option>
-                <option value="joga">Joga</option>
-                <option value="boks">Boks</option>
-                <option value="cardio">Cardio</option>
-                <option value="bieganie">Bieganie</option>
-                <option value="crossfit">CrossFit</option>
-                <option value="kulturystyka">Kulturystyka</option>
-            </select>
+        <section>
+    <form id="filter-form">
+        <label for="sport">Sport:</label>
+        <select id="sport">
+            <option value="all">Wszystkie</option>
+            <option value="Pilates">Pilates</option>
+            <option value="Siłownia">Siłownia</option>
+            <option value="Joga">Joga</option>
+            <option value="Boks">Boks</option>
+            <option value="Cardio">Cardio</option>
+            <option value="Bieganie">Bieganie</option>
+            <option value="CrossFit">CrossFit</option>
+            <option value="Kulturystyka">Kulturystyka</option>
+        </select>
 
-            <label for="gender">Płeć:</label>
-            <select id="gender">
-                <option value="all">Wszystkie</option>
-                <option value="male">Mężczyzna</option>
-                <option value="female">Kobieta</option>
-            </select>
+        <label for="gender">Płeć:</label>
+        <select id="gender">
+            <option value="all">Wszyscy</option>
+            <option value="male">Mężczyzna</option>
+            <option value="female">Kobieta</option>
+        </select>
 
-            <label for="experience">Doświadczenie:</label>
-            <input type="range" id="experience" min="1" max="10" value="5">
+        <label for="experience">Doświadczenie (lata):</label>
+        <input type="number" id="experience" value="0" min="0" />
+    </form>
 
-            <label for="goals">Cele:</label>
-            <input type="text" id="goals" placeholder="np. Odchudzanie, zdrowy styl życia">
-        </form>
-
-        <table id="trainer-table">
-            <thead>
-                <tr>
-                    <th>Imię</th>
-                    <th>Sport</th>
-                    <th>Płeć</th>
-                    <th>Doświadczenie</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Trenerzy zostaną dodani dynamicznie z JavaScript -->
-            </tbody>
-        </table>
-    </section>
+    <table id="trainer-table">
+        <thead>
+            <tr>
+                <th>Imię i nazwisko</th>
+                <th>Sport</th>
+                <th>Płeć</th>
+                <th>Doświadczenie (lata)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Trenerzy zostaną dodani tutaj przez JavaScript -->
+        </tbody>
+    </table>
+</section>
 
     <footer>
         <h3>Planujemy dodać:</h3>
