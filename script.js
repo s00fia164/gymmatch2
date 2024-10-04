@@ -18,14 +18,14 @@ function swipeImage() {
 
 // Trenerzy - tabela z rekomendacjami i filtrowaniem
 const trainers = [
-    { name: 'Anna Nowak', sport: 'Pilates', gender: 'female', experience: 8, recommended: true },
-    { name: 'Jan Kowalski', sport: 'Siłownia', gender: 'male', experience: 7, recommended: true },
-    { name: 'Ewa Kwiatkowska', sport: 'Joga', gender: 'female', experience: 5, recommended: false },
+    { name: 'Hanna Markiewicz', sport: 'Pilates', gender: 'female', experience: 8, recommended: true },
+    { name: 'Piotr Kowalski', sport: 'Siłownia', gender: 'male', experience: 7, recommended: true },
+    { name: 'Ewa Jakubowska', sport: 'Joga', gender: 'female', experience: 5, recommended: false },
     { name: 'Adam Wiśniewski', sport: 'Boks', gender: 'male', experience: 6, recommended: false },
     { name: 'Karolina Lewandowska', sport: 'Cardio', gender: 'female', experience: 4, recommended: false },
     { name: 'Paweł Zieliński', sport: 'Bieganie', gender: 'male', experience: 9, recommended: false },
-    { name: 'Olga Malinowska', sport: 'CrossFit', gender: 'female', experience: 7, recommended: false },
-    { name: 'Michał Stasiak', sport: 'Kulturystyka', gender: 'male', experience: 10, recommended: false }
+    { name: 'Olga Kalinowska', sport: 'CrossFit', gender: 'female', experience: 7, recommended: false },
+    { name: 'Mateusz Stasiak', sport: 'Kulturystyka', gender: 'male', experience: 10, recommended: false }
 ];
 
 // Funkcja wyświetlająca trenerów
